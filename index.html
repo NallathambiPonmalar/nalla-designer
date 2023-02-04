@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav id="sidebar">
+    <h2>JAVASCRIPT</h2>
+
+    <ul>
+       <li> 
+       <a href="#What is JavaScript?" class="nav-item">What is JavaScript?</a> 
+       </li>
+       <li>
+        <a href="#JS Map()Method" class="nav-item">JS Map()Method</a> 
+       </li>
+       <li>
+        <a href="#JS Filter()Method" class="nav-item">JS Filter()Method</a> 
+       </li>  
+       <li>
+        <a href="#JS Some()Method" class="nav-item">JS Some()Method</a> 
+       </li> 
+       <li>
+        <a href="#JS Every()Method" class="nav-item">JS Every()Method</a> 
+       </li>
+       <li>
+        <a href="#JS Array.From()Method" class="nav-item">JS Array.From()Method</a> 
+       </li>
+       <li>
+        <a href="#JS Object.Assign()Method" class="nav-item">JS Object.Assign()Method</a> 
+       </li>
+       <li>
+        <a href="#JS String.Split()Method" class="nav-item">JS String.Split()Method</a> 
+       </li>
+       <li>
+        <a href="#JS String.Slice()Method" class="nav-item">JS String.Slice()Method</a> 
+       </li>
+       <li>
+        <a href="#JS String.IndexOf()Method" class="nav-item">JS String.IndexOf()Method</a> 
+       </li>
+       <li>
+        <a href="#Conclution" class="nav-item">Conclution</a> 
+       </li>
+    </ul>
+  </nav>
+  <main id="documentation">
+  <section id="What is JavaScript?">
+    <h2>What is JavaScript?</h2>
+  <article>
+     <p>
+        JavaScript is a cross-platform, object-oriented scripting language used to make webpages interactive (e.g., having complex animations, clickable buttons, popup menus, etc.).
+        There are also more advanced server side versions of JavaScript such as Node.js.
+     </p>
+    </article>
+  </section>
+  <section id="JS Map()Method">
+    <h2>JS Map()Method</h2>
+  <article>
+    <p>
+        It returns a new array with the result of a function for each element in another array. We can think this is a method like a for but easier to implement.
+        The array returned has the same length as the original array.
+    </p>
+      <h3>Example</h3>
+        <pre>
+          An array that contains the double of each item of another array.
+
+          const numbers = [100, 200, 300];
+          const doubles = numbers.map(n => n * 2);
+
+          // doubles = [200, 400, 600] 
+        </pre>
+  </article>
+  </section>
+  <section id="JS Filter()Method">
+    <h2>JS Filter()Method</h2>
+   <article>
+    <p>
+        It returns an array with all the elements of another array that meet a determined condition.
+    </p>
+      <h3>Example</h3>
+        <pre>
+            Return numbers less than or equal to 100
+
+            const numbers = [20, 200, 30, 45, 100, 102];
+            const result = numbers.filter(n => n <= 100);
+            
+            // result = [20, 30, 45, 100] 
+        </pre>
+   </article>
+  </section>
+  <section id="JS Some()Method">
+    <h2>JS Some()Method</h2>
+   <article>
+    <p>
+        It returns a bool if at least one element in an array meets a determined condition.
+    </p>
+    <h3>Example</h3>
+      <pre>
+        Return true if there is an adult age in the array.
+
+        const ages = [20, 13, 12];
+        const areAdults = ages.some(n => n >= 18);
+
+        // areAdults = true
+      </pre>
+    </article>
+  </section>
+  <section id="JS Every()Method">
+    <h2>JS Every()Method</h2>
+  <article>
+    <p>
+        It returns a bool if all of the elements in an array meets a determined condition.
+    </p>
+    <h3>Example</h3>
+      <pre>
+        Return true if all the ages in the array are adult.
+
+        const ages = [20, 13, 18, 43];
+        const allAdults = ages.every(n => n >= 18);
+
+        // allAdults = false
+      </pre>
+    </article>
+  </section>
+  <section id="JS Array.From()Method">
+    <h2>JS Array.From()Method</h2>
+  <article>
+    <p>
+        It returns an array created from any object with length or an iterable object like a string.
+    </p>
+    <h3>Example</h3>
+      <pre>
+        Return an array with each letter of my last name.
+
+        const lastName = 'mato';
+        const lnArray = Array.from(lastName);
+
+        // lnArray = ['m','a','t','o']
+     </pre>
+   </article>
+  </section>
+  <section id="JS Object.Assign()Method">
+    <h2>JS Object.Assign()Method</h2>
+   <article>
+     <p>
+        It copies one or more source objects to a target object. It replaces all the properties on the target object with the ones in the source objects.
+     </p>
+     <h3>Example 1</h3>
+      <pre>
+        Clone an object
+
+        const source = { "propA": 1 };
+        const copy = Object.assign({}, source);
+
+        // copy = { "propA": 1 };
+      </pre>
+     <h4>Example 2</h4>
+      <pre>
+        Multiple sources with different properties
+
+        const source1 = { "propA": 1 };
+        const source2 = { "propB": 2 };
+        const source3 = { "propC": 3 };
+        const target = Object.assign(source1, source2, source3);
+
+        // target = { "propA": 1, "propB": 2, "propC": 3 };
+      </pre>
+   </article>
+  </section>
+  <section id="JS String.Split()Method">
+    <h2>JS String.Split()Method</h2>
+  <article>
+    <p>
+        It separates a certain string into multiple substrings using a specified separator.
+    </p>
+    <h3>Example</h3>
+     <pre>
+       Separate string by commas.
+
+       const str = 'text1,text2,text3';
+       const splitted = str.split(",");
+    
+       // splitted = ['text1', 'text2', 'text3']
+     </pre>
+  </article>
+  </section>
+  <section id="JS String.Slice()Method">
+    <h2>JS String.Slice()Method</h2>
+    <article>
+        <p>
+            It extracts a section of a string, delimited by two indexes, and returns a new one.
+        </p>
+     <h3>Example</h3>
+      <pre>
+        const str = 'alpha,beta,gamma';
+        const sliced = str.slice(6, 10);
+
+        // sliced = 'beta'
+      </pre>
+    </article>
+  </section>
+  <section id="JS String.IndexOf()Method">
+    <h2>JS String.IndexOf()Method</h2>
+  <article>
+      <p>
+        It finds and return the index of the first occurrence of an string.
+      </p>
+      <h3>Example</h3>
+       <pre>
+         const str = 'There is a snake in my boot';
+         const index = str.indexOf('snake');
+
+         // index = 11 
+       </pre>
+  </article>
+  </section>
+  <section id="Conclution">
+    <h2>Conclution</h2>
+  <article>
+    <p>
+        I hope this was helpful, especially for those who are javascript beginners.
+        As this is my first post, and I have the intention to write more, please feel free to leave your comments and let me know what I can improve.
+        Also, let me know which are your favorite or most used Javascript methods.
+    </p>
+  </article>
+  </section>
+  </main>
+</body>
+</html>

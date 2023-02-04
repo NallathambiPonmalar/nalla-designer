@@ -1,0 +1,82 @@
+html,
+body {
+    color: grey;
+    font-family: "Open Scans", Arial, sans-serif;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+}
+
+#sidebar {
+    position: fixed;
+    min-width: 290px;
+    top: 0px;
+    left: 0px;
+    width: 200px;
+    height: 100%;
+    border-right: 1px solid lightcoral;
+}
+
+h2 {
+   color: black;
+   margin: 10px;
+   text-align: left; 
+   font-size: 25px;
+   font-weight: thin;
+}
+
+#docmentation h2 {
+    text-align: left;
+    margin: 0px;
+}
+
+#sidebar ul {
+    height: 88%;
+    padding: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#sidebar li {
+    color: aqua;
+    border-top: 1px solid black;
+    list-style: none;
+    position: relative;
+    width: 100%;
+}
+
+.nav-item {
+    display: block;
+    padding: 10px 30px;
+    color: gray;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#documentation {
+    position: absolute;
+    margin-left: 310px;
+    padding: 20px;
+    margin-bottom: 110px;
+}
+
+article {
+    color: #4d4e53;
+    margin: 15px;
+    font-size: 20px;
+}
+
+section li {
+    margin: 15px 0 0 20px;
+}
+
+pre {
+    display: block;
+    text-align: left;
+    position: relative;
+    line-height: 2;
+    background-color: rgb(183, 240, 183);
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+}
